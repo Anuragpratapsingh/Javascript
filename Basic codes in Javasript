@@ -1,0 +1,130 @@
+//This function adds the item in the back of the array and removes the first item and returns it
+function inline(arr,item)
+{
+    arr.push(item);
+    return arr.shift();  
+}
+
+var testArr=["1","2","3","4","5"];
+
+//stringigy converts a array to a string
+console.log("Before :"+ JSON.stringify(testArr));
+inline(testArr,6);
+console.log("After :"+JSON.stringify(testArr));
+
+
+
+
+//Making an object
+var ourDog=
+{
+    "name" : "camper",
+    "legs" : 4,
+    "tail" : 1,
+    "friends":["everything"],
+    "the entry":"Not allowed"
+};
+//Can use objects as key value pair 
+
+console.log(ourDog.name);
+console.log(ourDog["name"]);
+//When accessing properties with spaces
+console.log(ourDog["the entry"]);
+//Can also change the properties of the objects
+ourDog.name="Pablo";
+console.log(ourDog.name);
+//Add properties as well
+ourDog.bark="woof";
+ourDog["bark2"]="bow-bow"
+
+//Deleting a property
+delete ourDog.bark;
+
+//Check if the object has a particular property
+if(ourDog.hasOwnProperty("legs"))
+{
+    console.log("It has the property");
+}
+else
+{
+    console.log("Not Found");
+}
+
+//Nested objects
+var family={
+    "father":
+    {
+        "mother":{
+            "son":"Nanu",
+            "daughter":"Nancy",
+            "number":2
+     },
+    "Profession":{
+        "contractor":1,
+        "advocate":1   
+    }     
+}
+};
+var query=family.father.mother.number;
+var query2=family.father.mother["daughter"];
+console.log(query);
+console.log(query2);
+
+//Nested arrays 
+//[] used so an array
+//whose both elements are objects and inside object there is another array
+var myPlants =
+[
+{
+   "type":"flowers",
+   "list":
+   [
+       "tulip",
+       "sunflower",
+       "rose"
+   ]
+},
+{
+    "type":"trees",
+    "list":
+    [
+        "sugarcane",
+        "bargad",
+        "eucalyptus"
+    ]
+}   
+];
+//To access let say eucalyptus
+var tree2=myPlants[1].list[2];
+console.log(tree2);
+
+//Using ternary opeartors
+//condition ? statement-if-true:statement-if-false;
+5==5? console.log("true"):console.log("false");
+
+//Using multiple ternary operators
+//eg make a function which tells if a number is positive negative or zero
+function check(a)
+{
+    return a>0 ? "positive" : a<0 ? "negative" : "zero";
+}
+console.log(check(0));
+
+//Converting a function to an arrow function
+//eg.
+var myConcat=function(a,b)
+{
+    return a.concat(b);
+}
+console.log("anurag","pratap");
+
+//To change this to arrow function
+var myconCat = (a,b) => a.concat(b);
+console.log(myconCat("anurag"," pratap"));
+
+var myconCat = (a,b) => a.concat(b);
+console.log(myconCat([1,2],[3,4,5]));
+
+
+
+
