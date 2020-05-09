@@ -1,0 +1,32 @@
+//JSON object tho comments are not allowed in JSON
+{
+    "abb":{
+        "name":"abb reseach",
+        "type":"IT and automation",
+        "rating":"4.2"
+    },
+    "microsoft":{
+        "name":"microsoft corporation",
+        "type":"It and operating system",
+        "rating":"4.5"
+    }
+}
+//Save with .json extension
+
+//Javascript code
+<script>
+    var companies= `{
+    "abb":{
+        "name":"abb reseach",
+        "type":"IT and automation",
+        "rating":"4.2"
+    },
+    "microsoft":{
+        "name":"microsoft corporation",
+        "type":"It and operating system",
+        "rating":"4.5"
+    }
+  }`
+  console.log(JSON.parse(companies));
+  
+        </script>
