@@ -24,7 +24,7 @@ var ourDog=
     "friends":["everything"],
     "the entry":"Not allowed"
 };
-//Can use objects as key value pair 
+//Can use objects as key value pair and it is optional to use double quotes for the key and value names
 
 console.log(ourDog.name);
 console.log(ourDog["name"]);
@@ -124,6 +124,22 @@ console.log(myconCat("anurag"," pratap"));
 
 var myconCat = (a,b) => a.concat(b);
 console.log(myconCat([1,2],[3,4,5]));
+
+//Using spread operator
+const arr1=["Jan","Feb","Mar","Apr","May"];
+let arr2;
+//Can have a function without a name which is known as anonymous function
+(function(){
+    arr2=arr1;
+    //Like shallow copy
+    //If just do like this then basically arr2 will be the diffrent name of arr1 and any changes in arr1 will result in changes in arr2
+    arr1[0]="potato";
+})();
+console.log(arr2);
+//I don't want like this want a deep copy so use spread operator
+arr2=[...arr1];
+arr1[1]="kheere";
+console.log(arr2);
 
 
 
